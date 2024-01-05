@@ -1,0 +1,34 @@
+.question-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid; 
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.answer{
+    display: block;
+    width: 300px;
+    text-align: start;
+}
+
+.next-button{
+    width: 100px;
+}
+
+.true{
+    background-color: lightgreen;
+    font-weight: 900;
+    color: black;
+    cursor:auto;
+}
+
+/* .true:hover{} */
+
+.false{
+    background-color: red;
+    font-weight: 900;
+    color: black;
+    cursor:auto;
+}
