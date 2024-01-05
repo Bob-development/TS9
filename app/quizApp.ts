@@ -17,12 +17,6 @@ export class QuizApp implements IComponent{
 
     constructor(){
         this.app = document.querySelector("#app");
-
-        this.result = new Component({
-            tagName: 'div',
-            className: 'result-of-testing',
-            textContent: `Correct answers: ${this.correctAnswers} of ${questionsData.length}`
-        })
         
         this.component = new Component({
             className: 'quiz-app-wrapper',
@@ -36,7 +30,13 @@ export class QuizApp implements IComponent{
         return this.question.getComponent();
     }
 
-    getResult(){
+    createResult(){
+        this.result = new Component({
+            tagName: 'div',
+            className: 'result-of-testing',
+            textContent: `Correct answers: ${this.correctAnswers} of ${questionsData.length}`
+        })
+        
         return this.result.getComponent();
     }
 
@@ -84,7 +84,7 @@ export class QuizApp implements IComponent{
                 }
 
                 if(this.questionCounter === questionsData.length){
-                    render(this.component.getComponent(), this.getResult())
+                    render(this.component.getComponent(), this.createResult())
                 }                
             }
         }
